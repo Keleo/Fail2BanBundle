@@ -31,9 +31,8 @@ You could also [download it as zip](https://github.com/keleo/Fail2BanBundle/arch
 
 ## Fail2Ban configurations
 
-You should know how to use and configure fail2ban, we cannot help with that part!
-
-Having said that, here are some possible rules for your fail2ban configuration.
+You should know how to use and configure `fail2ban`, we cannot help with that part!
+Having said that, here are some possible rules for your `fail2ban` configuration.
 
 First the Kimai specific filter:
 ```
@@ -57,6 +56,6 @@ maxretry  = 3
 
 ## Credits
 
-Bundle inspired by the blog entry: https://www.nomisoft.co.uk/articles/symfony-fail2ban-ip-blocking
-
-Thanks also to @BeckeBauer for the inspiration and the initial try!
+- Bundle inspired by the blog entry: https://www.nomisoft.co.uk/articles/symfony-fail2ban-ip-blocking
+- Thanks also to [@BeckeBauer](https://github.com/kevinpapst/kimai2/issues/951) for the inspiration and the initial try
+- http://www.fail2ban.org/wiki/index.php/Main_Page
