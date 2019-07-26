@@ -6,3 +6,6 @@ services:
 
     KimaiPlugin\Fail2BanBundle\EventSubscriber\FailedLoginSubscriber:
         arguments: ['@monolog.logger.fail2ban']
+
+    KimaiPlugin\Fail2BanBundle\Fail2BanPlugin:
+        public: false
