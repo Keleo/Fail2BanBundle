@@ -1,6 +1,6 @@
 {
     "name": "keleo/fail2ban-bundle",
-    "description": "A Kimai 2 plugin, which logs all failed logins to a new lofile, which can be consumed by Fail2Ban.",
+    "description": "A Kimai 2 plugin which logs all failed login attempts to a dedicated logfile, which can be consumed by Fail2Ban.",
     "homepage": "https://www.kimai.org/store/fail2ban-bundle.html",
     "type": "kimai-plugin",
     "require": {
@@ -21,7 +21,7 @@
     "extra": {
         "kimai": {
             "require": "1.0",
-            "version": "0.1",
+            "version": "1.0",
             "name": "Fail2BanBundle"
         }
     }
