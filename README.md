@@ -1,9 +1,8 @@
 # Fail2BanBundle
 
-A Kimai 2 plugin, which allows to log all failed logins with their IP to a log file.
+A Kimai 2 plugin, which logs an error message for every failed login attempt to a dedicated logfile.
 
-This logfile can be consumed by `fail2ban` to prevent authentication attacks.
-
+This logfile can be analyzed by `fail2ban` to block access and prevent authentication attacks.
 
 ## Installation
 
@@ -46,7 +45,7 @@ And the additional jail.local for Kimai2:
 #/etc/fail2ban/jail.local
 [kimai2]
 enabled   = true
-filter    = symfony
+filter    = kimai2
 logpath   = /var/www/kimai2/var/log/fail2ban.log
 port      = http,https
 bantime   = 600
