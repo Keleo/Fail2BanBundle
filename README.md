@@ -13,7 +13,7 @@ git clone https://github.com/Keleo/Fail2BanBundle.git
 ```
 
 And then rebuild the cache: 
-```
+```bash
 cd /kimai/
 bin/console cache:clear
 bin/console cache:warmup
@@ -24,7 +24,7 @@ You could also [download it as zip](https://github.com/keleo/Fail2BanBundle/arch
 ```
 /kimai/var/plugins/
 ├── Fail2BanBundle
-│   ├── Fail2BanBundle.php
+│   ├── Fail2BanBundle.php
 |   └ ... more files and directories follow here ... 
 ```
 
@@ -51,6 +51,11 @@ port      = http,https
 bantime   = 600
 banaction = iptables-multiport
 maxretry  = 3
+```
+
+Now touch the file to [make sure it exists](https://github.com/Keleo/Fail2BanBundle/issues/2):
+```bash
+touch /var/www/kimai2/var/log/fail2ban.log
 ```
 
 ## Credits
