@@ -10,8 +10,9 @@ This plugin is compatible with the following Kimai releases:
 
 | Bundle version | Minimum Kimai version |
 |----------------|-----------------------|
+| 2.0            | 2.0                   |
 | 1.1            | 1.18                  |
-| 1.0            | 1.0                   |
+| 1.0 - 1.0.1    | 1.0                   |
 
 
 First clone it to your Kimai installation `plugins` directory:
