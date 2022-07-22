@@ -1,7 +1,8 @@
 <?php
 
 /*
- * This file is part of the Kimai Fail2BanBundle.
+ * This file is part of the Fail2BanBundle for Kimai.
+ * All rights reserved by Kevin Papst (www.keleo.de).
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -17,17 +18,13 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class Fail2BanExtension extends Extension implements PrependExtensionInterface
 {
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
-        try {
-            $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-            $loader->load('services.yaml');
-        } catch (\Exception $e) {
-            echo '[Fail2BanExtension] invalid services config found: ' . $e->getMessage();
-        }
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('services.yaml');
     }
 
-    public function prepend(ContainerBuilder $container)
+    public function prepend(ContainerBuilder $container): void
     {
         $container->prependExtensionConfig('monolog', [
             'channels' => ['fail2ban'],
@@ -41,5 +38,4 @@ class Fail2BanExtension extends Extension implements PrependExtensionInterface
             ],
         ]);
     }
-
 }

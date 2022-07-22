@@ -1,7 +1,8 @@
 <?php
 
 /*
- * This file is part of the Kimai Fail2BanBundle.
+ * This file is part of the Fail2BanBundle for Kimai.
+ * All rights reserved by Kevin Papst (www.keleo.de).
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.

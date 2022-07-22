@@ -1,9 +1,9 @@
 {
     "name": "keleo/fail2ban-bundle",
-    "description": "A Kimai 2 plugin which logs all failed login attempts to a dedicated logfile, which can be consumed by Fail2Ban.",
+    "description": "A Kimai plugin which logs all failed login attempts to a dedicated logfile, which can be consumed by Fail2Ban.",
     "homepage": "https://www.kimai.org/store/fail2ban-bundle.html",
     "type": "kimai-plugin",
-    "version": "1.0.1",
+    "version": "1.1",
     "keywords": [
         "kimai",
         "kimai-plugin"
@@ -12,15 +12,51 @@
     "authors": [
         {
             "name": "Kevin Papst",
-            "email": "kpapst@gmx.net",
+            "email": "info@keleo.de",
             "homepage": "https://www.keleo.de"
         }
     ],
     "extra": {
         "kimai": {
-            "require": "1.0",
-            "version": "1.0",
-            "name": "Fail2BanBundle"
+            "require": "1.18",
+            "name": "Fail2Ban"
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "KimaiPlugin\\Fail2BanBundle\\": ""
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": false,
+            "symfony/flex": false
+        },
+        "platform": {
+            "php": "7.3"
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "codestyle": "../../../vendor/bin/php-cs-fixer fix --dry-run --verbose --show-progress=none",
+        "codestyle-fix": "../../../vendor/bin/php-cs-fixer fix",
+        "codestyle-check": "../../../vendor/bin/php-cs-fixer fix --dry-run --verbose --using-cache=no --show-progress=none --format=checkstyle",
+        "phpstan": "../../../vendor/bin/phpstan analyse . -c phpstan.neon --level=9",
+        "linting": [
+            "composer validate --strict --no-check-version",
+            "@codestyle-check",
+            "@phpstan"
+        ]
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "kevinpapst/kimai2": "^1.0",
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-symfony": "^1.0",
+        "symfony/console": "^4.0",
+        "symfony/event-dispatcher": "^4.0"
     }
 }
