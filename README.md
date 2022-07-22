@@ -1,28 +1,34 @@
 # Fail2BanBundle
 
-A Kimai 2 plugin, which logs an error message for every failed login attempt to a dedicated logfile.
+A Kimai plugin, which logs an error message for every failed login attempt to a dedicated logfile.
 
 This logfile can be analyzed by `fail2ban` to block access and prevent authentication attacks.
 
 ## Installation
 
+This plugin is compatible with the following Kimai releases:
+
+| Bundle version | Minimum Kimai version |
+|----------------|-----------------------|
+| 1.1            | 1.19                  |
+| 1.0            | 1.0                   |
+
+
 First clone it to your Kimai installation `plugins` directory:
 ```
-cd /kimai/var/plugins/
+cd kimai2/var/plugins/
 git clone https://github.com/Keleo/Fail2BanBundle.git
 ```
 
 And then rebuild the cache: 
 ```bash
-cd /kimai/
-bin/console cache:clear
-bin/console cache:warmup
+bin/console kimai:reload --env=prod
 ```
 
 You could also [download it as zip](https://github.com/keleo/Fail2BanBundle/archive/master.zip) and upload the directory via FTP:
 
 ```
-/kimai/var/plugins/
+kimai2/var/plugins/
 ├── Fail2BanBundle
 │   ├── Fail2BanBundle.php
 |   └ ... more files and directories follow here ... 
@@ -61,5 +67,5 @@ touch /var/www/kimai2/var/log/fail2ban.log
 ## Credits
 
 - Bundle inspired by [this blog entry](https://www.nomisoft.co.uk/articles/symfony-fail2ban-ip-blocking) 
-- Thanks also to [@BeckeBauer](https://github.com/kevinpapst/kimai2/issues/951) for the idea and the initial try
-- Find config documentation in the [fail2ban wiki](http://www.fail2ban.org/wiki/index.php/Main_Page)
+- Thanks to [@BeckeBauer](https://github.com/kevinpapst/kimai2/issues/951) for the idea
+- Documentation in the [fail2ban wiki](http://www.fail2ban.org/wiki/index.php/Main_Page)
