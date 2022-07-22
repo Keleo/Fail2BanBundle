@@ -59,6 +59,7 @@
         "phpstan/phpstan": "^1.0",
         "phpstan/phpstan-symfony": "^1.0",
         "symfony/console": "^6.0",
-        "symfony/event-dispatcher": "^6.0"
+        "symfony/event-dispatcher": "^6.0",
+        "symfony/security": "^6.0"
     }
 }
