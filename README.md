@@ -10,7 +10,7 @@ This plugin is compatible with the following Kimai releases:
 
 | Bundle version | Minimum Kimai version |
 |----------------|-----------------------|
-| 1.1            | 1.18                  |
+| 1.1 - 1.2      | 1.18                  |
 | 1.0            | 1.0                   |
 
 
