@@ -67,5 +67,5 @@ touch /var/www/kimai2/var/log/fail2ban.log
 ## Credits
 
 - Bundle inspired by [this blog entry](https://www.nomisoft.co.uk/articles/symfony-fail2ban-ip-blocking) 
-- Thanks to [@BeckeBauer](https://github.com/kevinpapst/kimai2/issues/951) for the idea
+- Thanks to [@BeckeBauer](https://github.com/kimai/kimai/issues/951) for the idea
 - Documentation in the [fail2ban wiki](http://www.fail2ban.org/wiki/index.php/Main_Page)
