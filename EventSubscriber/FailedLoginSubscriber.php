@@ -13,27 +13,22 @@ namespace KimaiPlugin\Fail2BanBundle\EventSubscriber;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\Security\Core\Event\AuthenticationFailureEvent;
+use Symfony\Component\Security\Http\Event\LoginFailureEvent;
 
 class FailedLoginSubscriber implements EventSubscriberInterface
 {
-    private $logger;
-    private $request;
-
-    public function __construct(LoggerInterface $logger, RequestStack $request)
+    public function __construct(private LoggerInterface $logger, private RequestStack $request)
     {
-        $this->logger = $logger;
-        $this->request = $request;
     }
 
     public static function getSubscribedEvents(): array
     {
         return [
-            AuthenticationFailureEvent::class => ['onAuthenticationFailure', 100],
+            LoginFailureEvent::class => ['onAuthenticationFailure', 100],
         ];
     }
 
-    public function onAuthenticationFailure(AuthenticationFailureEvent $event): void
+    public function onAuthenticationFailure(LoginFailureEvent $event): void
     {
         if (($request = $this->request->getCurrentRequest()) === null) {
             return;

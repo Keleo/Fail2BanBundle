@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0
+
+Compatibility: requires minimum Kimai 2.0
+
+- Added: adjustments for new major release
+
 ## 1.2
 
 Compatibility: requires minimum Kimai 1.18
