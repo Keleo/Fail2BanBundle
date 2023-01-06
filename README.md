@@ -16,7 +16,7 @@ This plugin is compatible with the following Kimai releases:
 
 You find the most notable changes between the versions in the file [CHANGELOG.md](CHANGELOG.md).
 
-Download and extract the [compatible release](https://github.com/Keleo/Fail2BanBundle/releases).
+Download and extract the [compatible release](https://github.com/Keleo/Fail2BanBundle/releases) in `var/plugins/` (see [plugin docs](https://www.kimai.org/documentation/plugin-management.html)).
 
 The file structure needs to look like this afterwards:
 
