@@ -10,29 +10,26 @@ This plugin is compatible with the following Kimai releases:
 
 | Bundle version | Minimum Kimai version |
 |----------------|-----------------------|
-| 2.0            | 2.0                   |
+| 2.0            | 2.0.0                 |
 | 1.1 - 1.2      | 1.18                  |
 | 1.0 - 1.0.1    | 1.0                   |
 
+You find the most notable changes between the versions in the file [CHANGELOG.md](CHANGELOG.md).
 
-First clone it to your Kimai installation `plugins` directory:
-```
-cd kimai2/var/plugins/
-git clone https://github.com/Keleo/Fail2BanBundle.git
-```
+Download and extract the [compatible release](https://github.com/Keleo/Fail2BanBundle/releases).
 
-And then rebuild the cache: 
+The file structure needs to look like this afterwards:
+
 ```bash
-bin/console kimai:reload --env=prod
-```
-
-You could also [download it as zip](https://github.com/keleo/Fail2BanBundle/archive/master.zip) and upload the directory via FTP:
-
-```
-kimai2/var/plugins/
+var/plugins/
 ├── Fail2BanBundle
 │   ├── Fail2BanBundle.php
 |   └ ... more files and directories follow here ... 
+```
+
+Then rebuild the cache:
+```bash
+bin/console kimai:reload --env=prod
 ```
 
 ## Fail2Ban configurations
