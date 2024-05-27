@@ -3,7 +3,7 @@
     "description": "A Kimai plugin which logs all failed login attempts to a dedicated logfile, which can be consumed by Fail2Ban.",
     "homepage": "https://www.kimai.org/store/fail2ban-bundle.html",
     "type": "kimai-plugin",
-    "version": "2.0",
+    "version": "2.1.0",
     "keywords": [
         "kimai",
         "kimai-plugin"
@@ -17,7 +17,7 @@
     ],
     "extra": {
         "kimai": {
-            "require": 20000,
+            "require": 21700,
             "name": "Fail2Ban"
         }
     },
