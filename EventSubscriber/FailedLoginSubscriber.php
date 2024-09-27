@@ -37,7 +37,7 @@ class FailedLoginSubscriber implements EventSubscriberInterface
         $ipAddress = $request->getClientIp();
 
         $this->logger->error(
-            sprintf('%s', $ipAddress)
+            \sprintf('%s', $ipAddress)
         );
     }
 }
